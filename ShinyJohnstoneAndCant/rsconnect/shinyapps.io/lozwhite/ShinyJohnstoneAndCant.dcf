@@ -1,0 +1,12 @@
+name: ShinyJohnstoneAndCant
+title: ShinyJohnstoneAndCant
+username: lozwhite
+account: lozwhite
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13825745
+bundleId: 9708923
+url: https://lozwhite.shinyapps.io/ShinyJohnstoneAndCant/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
