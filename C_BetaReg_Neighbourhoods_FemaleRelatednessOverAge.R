@@ -8,13 +8,14 @@ library(ggplot2)
 
 #### Neighbourhood Scale ####
 
-Ngogo <- fread(file = "../Data/AdultFemale_MeanR_OverYears_Neighbourhood.csv")
+Ngogo <- fread(file = "./Data/AdultFemale_MeanR_OverYears_Neighbourhood.csv")
 
 Ngogo$male=ifelse(Ngogo$sex=="M", 1, 0)
 meanAge=mean(Ngogo$age) 
 sdAge=sd(Ngogo$age)
 
 length(unique(Ngogo$IndF))
+unique(Ngogo[, c("IndF", "ImmiOrNatal")])[, .N, by=ImmiOrNatal]
 Ngogo[, .N/2, by=IndF]
 
 dat1=list(

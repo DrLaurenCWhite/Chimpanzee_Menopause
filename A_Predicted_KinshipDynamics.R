@@ -7,7 +7,7 @@ library(ggpubr)
 
 #### Predicted Kinship Dynamics at the Community Scale ####
 M=1 #local breeding rate
-u=0.1 #turn over rate
+u=0.076 #turn over rate
 df=0.5 #female dispersal rate
 dm=0 #male dispersal rate
 nf=66 #number of adult females
@@ -61,6 +61,7 @@ Gmm_N=g0mm
 Gmf_N=g0mf
 Gfm_N=g0fm
 trot=data.table(N=0, gff=Gff_N, gmm=Gmm_N, gfm=Gfm_N, gmf=Gmf_N)
+
 for (i in 1:30){
   Gff_N1<-u*(1-df)*(1/2)*(((1/nf)*Gf+((nf-1)/nf)*Gff_N)+M*Gmf_N)+(1-u)*Gff_N
   Gmm_N1<-u*(1-dm)*(1/2)*(M*((1/nm)*Gm+((nm-1)/nm)*Gmm_N)+Gfm_N)+(1-u)*Gmm_N
@@ -83,7 +84,7 @@ write.csv(trot, file="./Data/PredictedKinship_Community.csv")
 
 #### Predicted Kinship Dynamics at the Neighbourhood Scale ####
 M=1 #local breeding rate
-u=0.1 #turn over rate
+u=0.076 #turn over rate
 df=0.9 #female dispersal rate
 dm=0.1 #male dispersal rate
 nf=18 #number of females
@@ -158,7 +159,7 @@ write.csv(trotN, file="./Data/PredictedKinship_Neighbourhood.csv")
 
 #### Predicted Kinship Dynamics at the Neighbourhood Scale With Reduced Local Breeding Rate ####
 M=0.5 #local breeding rate
-u=0.1 #turnover rate
+u=0.076 #turnover rate
 df=0.9 #female dispersal rate
 dm=0.1 #male dispersal rate
 nf=18 #number of females

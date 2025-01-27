@@ -16,6 +16,7 @@ meanAge=mean(Ngogo$age)
 sdAge=sd(Ngogo$age)
 
 length(unique(Ngogo$IndF))
+unique(Ngogo[, c("IndF", "ImmiOrNatal")])[, .N, by=ImmiOrNatal]
 Ngogo[, .N/2, by=IndF]
 
 dat1=list(

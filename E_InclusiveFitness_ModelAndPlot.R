@@ -64,7 +64,7 @@ maleline$age=meanAge+maleline$age_s*sdAge
 
 ##Cost/benefit for observed
 M=1 
-u=0.1
+u=0.076
 df=0.5
 dm=0
 nf=66
@@ -111,7 +111,7 @@ p1=ggplot(hum, aes(x=Ns, y=res)) + geom_line(lwd=2) + #xlab('Age relative to mea
         legend.position="none") +
   NULL
 
-#### Neighoburhood ####
+#### Subgroup ####
 
 NgogoN <- fread("./Data/AdultFemale_MeanR_OverYears_Neighbourhood.csv")
 
@@ -169,7 +169,7 @@ maleline_N$age=meanAgeN+maleline_N$age_s*sdAgeN
 
 ##Cost/benefit for observed
 M=1
-u=0.1
+u=0.076
 df=0.9
 dm=0.1
 nf=18
