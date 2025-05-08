@@ -16,7 +16,7 @@ ui <- fluidPage(
                      sliderInput(inputId="DM", label="Male dispersal rate (dm)", value=0.15, min=0, max=1),
                      sliderInput(inputId="NF", label="Number of adult female in group (nf)", value=3, min=1, max=100),
                      sliderInput(inputId="NM", label="Number of adult male in group (nm)", value=3, min=1, max=100),
-                     sliderInput(inputId="u", label="u", value=0.1, min=0, max=1),
+                     sliderInput(inputId="u", label="Replacement rate (u=uf=um)", value=0.1, min=0, max=1),
                      sliderInput(inputId="m", label="Proportion of local breeding (m)", value=1, min=0, max=1),
                      #selectInput(inputId="m", label="Proportion of local breeding (m)", selected=1, choices=c(0,1)),
                      actionButton("reset1", "Ape Case", width="100%"),
